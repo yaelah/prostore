@@ -1,7 +1,7 @@
-import { EllipsisVertical, ShoppingCart, UserIcon } from "lucide-react";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ModeToggle from "./mode-toggle";
+import Link from "next/link";
+import { EllipsisVertical, ShoppingCart } from "lucide-react";
 import {
   Sheet,
   SheetContent,
@@ -21,7 +21,6 @@ const Menu = () => {
             <ShoppingCart /> Cart
           </Link>
         </Button>
-
         <UserButton />
       </nav>
       <nav className="md:hidden">
@@ -38,11 +37,6 @@ const Menu = () => {
               </Link>
             </Button>
             <UserButton />
-            <Button asChild>
-              <Link href="/sign-in">
-                <UserIcon /> Sign In
-              </Link>
-            </Button>
             <SheetDescription></SheetDescription>
           </SheetContent>
         </Sheet>
@@ -50,4 +44,5 @@ const Menu = () => {
     </div>
   );
 };
+
 export default Menu;
